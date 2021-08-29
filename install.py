@@ -8,3 +8,5 @@ elif _platform == "darwin":
 elif _platform == "win32" or _platform == "win64":
     os.system("[System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true};")
     os.system("(new-object System.Net.WebClient).DownloadFile('http://www.mysite.com', 'C:\Temp\file')")
+    os.system("cd C:\Temp\file"
+    os.system("python get-pip.py")
